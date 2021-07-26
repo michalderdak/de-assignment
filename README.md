@@ -8,7 +8,7 @@ It is important to emphasize that the task at hand should not be interpreted as 
 ## The Objective
 The assignment focuses on solving a variant of the small-files problem. 
 You are given access to a GCP bucket with many small .csv files that have various data structures in them. 
-Your goal is to perform a series of ETL steps that demonstrate your ability to work with simple data. It would be preferred if you use Python for you solution, but you can use whatever language you decide for :) You can use Scala, Python or R to solve the problem.
+Your goal is to perform a series of ETL steps that demonstrate your ability to work with simple data. It would be preferred if you use Python for you solution, but you can use whatever language you decide for :) You can use Scala, R, Go or whatever to solve the problem.
 
 ## Access
 The generated data files needed for the assignment is located in the public storage bucket: <https://storage.googleapis.com/de-assignment-data-bucket/data/>.
