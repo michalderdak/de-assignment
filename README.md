@@ -28,7 +28,7 @@ Note, that most programming languages have libraries to interact with GCP. E.g. 
 Hint: Since you will call the bucket without a GCP project, you would like to use an [anonymous client](https://googleapis.dev/python/storage/latest/client.html#google.cloud.storage.client.Client.create_anonymous_client).
 
 ## Input
-You are given input files with the naming convention : `<craft>_<planet>_<date>_<time>.csv` (see samples of theese in the [data_samples](https://github.com/lunarway/de-assignment/data_samples) ) folder:
+You are given input files with the naming convention : `<craft>_<planet>_<date>_<time>.csv` (see samples of theese in the [data_samples](https://github.com/lunarway/de-assignment/tree/master/data_samples) ) folder:
 
 `<craft>`: [`rocket`, `lander`] <br>
 `<planet>` : [`venus`, `saturn`] <br>
@@ -48,7 +48,7 @@ There is four different file formats :
 
 ## Tasks
 1. ##### Data ingestion:
- - Download files from the GCP bucket in batches of a certain size.
+ - Fetch files from the Google Cloud Platform bucket in batches of a certain size.
 2. ##### Data transformation:
  - Extract the `<date>_<time>` components from each file name, and convert that to a timestamp. Add the timestamp as a column called `timestamp` in the given file in the format `yyyy-MM-dd HH:mm:ss`
  - Parse the `id` column's middle value (for `bf8d460f-943c-4084-835c-a03dde141041` this is `4084`), and use that as an id in the newly generated file.
