@@ -8,6 +8,7 @@ It is important to emphasize that the task at hand should not be interpreted as 
 ## The Objective
 The assignment focuses on solving a variant of the small-files problem. 
 You are given access to a GCP bucket with many small .csv files that have various data structures in them. 
+
 Your goal is to perform a series of ETL steps that demonstrate your ability to work with simple data. It would be preferred if you use Python for you solution, but you can use whatever language you decide for :) You can use Scala, R, Go or whatever to solve the problem.
 
 ## Access
@@ -28,7 +29,8 @@ Note, that most programming languages have libraries to interact with GCP. E.g. 
 Hint: Since you will call the bucket without a GCP project, you would like to use an [anonymous client](https://googleapis.dev/python/storage/latest/client.html#google.cloud.storage.client.Client.create_anonymous_client).
 
 ## Input
-You are given input files with the naming convention : `<craft>_<planet>_<date>_<time>.csv` (see samples of theese in the [data_samples](https://github.com/lunarway/de-assignment/tree/master/data_samples) ) folder:
+You are given input files with the naming convention :
+`<craft>_<planet>_<date>_<time>.csv` (see samples of theese in the [data_samples](https://github.com/lunarway/de-assignment/tree/master/data_samples) ) folder:
 
 `<craft>`: [`rocket`, `lander`] <br>
 `<planet>` : [`venus`, `saturn`] <br>
