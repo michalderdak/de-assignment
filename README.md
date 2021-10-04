@@ -30,7 +30,7 @@ Hint: Since you will call the bucket without a GCP project, you would like to us
 
 ## Input
 You are given input files with the naming convention :
-`<craft>_<planet>_<date>_<time>.csv` (see samples of theese in the [data_samples](https://github.com/lunarway/de-assignment/tree/master/data_samples) ) folder:
+`<craft>_<planet>_<date>_<time>.csv` (see samples of these in the [data_samples](https://github.com/lunarway/de-assignment/tree/master/data_samples) ) folder:
 
 `<craft>`: [`rocket`, `lander`] <br>
 `<planet>` : [`venus`, `saturn`] <br>
