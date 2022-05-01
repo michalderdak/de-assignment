@@ -1,9 +1,10 @@
 # %%
 
-import pandas as pd
-from datetime import datetime
-from google.cloud import storage
 import os
+from datetime import datetime
+
+import pandas as pd
+from google.cloud import storage
 
 BUCKET_NAME = 'de-assignment-data-bucket'
 storage_client = storage.Client.create_anonymous_client()
