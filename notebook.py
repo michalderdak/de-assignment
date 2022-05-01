@@ -8,7 +8,7 @@ import os
 BUCKET_NAME = 'de-assignment-data-bucket'
 storage_client = storage.Client.create_anonymous_client()
 
-pipeline_root = '/Users/michalderdak/personal/de-assignment/data'
+pipeline_root = '/Users/michalderdak/personal/de-assignment/pipeline-root'
 os.makedirs(pipeline_root, exist_ok=True)
 
 
