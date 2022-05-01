@@ -1,5 +1,5 @@
 # Apache Beam
-I have decided to use Apache Beam SDK to define the processing pipeline because of it's support for various distributed data processing systems. 
+I have decided to use Apache Beam SDK to define the processing pipeline. The decision is mainly based on its support for various distributed data processing systems. 
 
 # File structure
 - [Runner](space_pipeline.py)
