@@ -8,9 +8,12 @@ import pandas as pd
 class ToLowercaseColumns(beam.DoFn):
     def process(self, element):
         df = pd.read_csv(element)
-        df.columns = [col.lower() for col in df.columns]
+        df.columns = self._to_lowercase(df.columns)
         df.to_csv(element, index=False)
         yield element
+
+    def _to_lowercase(self, items):
+        return [item.lower() for item in items]
 
 
 class ExtractDateTime(beam.DoFn):
@@ -27,9 +30,12 @@ class ExtractDateTime(beam.DoFn):
 class ParseID(beam.DoFn):
     def process(self, element):
         df = pd.read_csv(element)
-        df['id'] = df['id'].apply(lambda x: x.split('-')[2])
+        df['id'] = df['id'].apply(self._extract_id)
         df.to_csv(element, index=False)
         yield element
+
+    def _extract_id(self, id):
+        return id.split('-')[2]
 
 
 class ToNumeric(beam.DoFn):
