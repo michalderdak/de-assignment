@@ -1,3 +1,28 @@
+# Apache Beam
+I have decided to use Apache Beam SDK to define the processing pipeline because of it's support for various distributed data processing systems. 
+
+# File structure
+- [Runner](space_pipeline.py)
+  - Notebook to run the pipeline locally.
+- **Components**
+  - [io](components/io.py)
+  - [transform](components/transform.py)
+- [Notebook](notebook.py)
+  - Used for initial sketch of the transform functions. Can be ignored
+- [Results](results.ipynb)
+  - Contains examples from pipeline result
+
+# Assumptions
+- Conversion of the size column to integer doesn't specify whether to drop the invalid rows or not. I decided to keep them with a default value of `None`
+- The transformation of the size to the magnitude doesn't specify what to do with out of the range magnitudes (or `None` values). I decided to simply print `unknown` for those cases.
+
+# Future improvements
+- Create configuration to run on one of the distributed data processing systems.
+  - e.g. [Dataflow](https://beam.apache.org/documentation/runners/dataflow/)
+- Instead of streaming on per file basis, consider streaming the data on per row basis. 
+- Consider using [GCS io](https://beam.apache.org/releases/pydoc/2.2.0/apache_beam.io.gcp.gcsio.html)
+
+# --- Original text of the assignment below ---
 # Data Engineering Assignment : Small File Problem
 
 ## Introduction
@@ -38,7 +63,7 @@ You are given input files with the naming convention :
 
 There is four different file formats :
 
-| rocket_venus       | rocket_saturn       | lander_venus       | lander_saturn    | 
+| rocket_venus       | rocket_saturn       | lander_venus       | lander_saturn    |
 | ------------------ | ------------------- | ------------------ | ---------------- |
 | id (UUID)          | id (UUID)           | id (UUID)          | id (UUID)        |
 | size (String)      | size (String)       | size (String)      | size (String)    |
